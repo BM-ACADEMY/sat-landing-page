@@ -1,0 +1,601 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BM Techx | SAT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!-- Section 1 (Unchanged) -->
+    <section id="home"
+        class="bg-[url('../image/gridBackground.png')] w-full min-h-auto bg-no-repeat bg-cover bg-center text-sm pb-44 text-slate-900">
+        <nav class="flex items-center justify-between p-4 md:px-16 lg:px-24 xl:px-32 md:py-6 w-full">
+            <a href="#">
+                <img src="../image/bm.png" alt="Your Logo" class="h-10 md:h-12 w-auto" />
+            </a>
+            <div id="menu"
+                class="max-md:absolute max-md:top-0 max-md:left-0 max-md:w-0 max-md:transition-all max-md:duration-300 max-md:overflow-hidden max-md:h-full max-md:bg-white/50 max-md:backdrop-blur max-md:flex-col max-md:justify-center flex items-center gap-8 font-medium">
+                <a href="#home" class="hover:text-gray-600">Home</a>
+                <a href="#about" class="hover:text-gray-600">About</a>
+                <a href="#scholarship" class="hover:text-gray-600">Scholarship</a>
+                <a href="#testimonials" class="hover:text-gray-600">Testimonials</a>
+                <a href="#contact" class="hover:text-gray-600">Contact</a>
+                <button id="close-menu"
+                    class="md:hidden bg-gray-800 hover:bg-black text-white p-2 rounded-md aspect-square font-medium transition">
+                    <i class="fas fa-xmark"></i>
+                </button>
+            </div>
+            <button onclick="window.location.href='tel:+919944288271'"
+                class="hidden md:block bg-gray-800 hover:bg-black text-white px-6 py-3 rounded-full font-medium transition">
+                Contact Us
+            </button>
+
+            <button id="open-menu"
+                class="md:hidden bg-gray-800 hover:bg-black text-white p-2 rounded-md aspect-square font-medium transition">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        <div
+            class="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 border border-slate-300 hover:border-slate-400/70 rounded-full max-w-full w-[90%] sm:w-max mx-auto px-4 py-3 mt-20 md:mt-32 text-center sm:text-left transition-all duration-300">
+            <span class="text-sm sm:text-base font-medium text-slate-800">
+                <i class="fas fa-graduation-cap mr-2 text-indigo-600"></i>Unlock Your Future with BM Academy’s SAT
+                Scholarship Test!
+            </span>
+        </div>
+        <h5 class="text-4xl md:text-7xl font-medium max-w-[850px] text-center mx-auto mt-8">
+            Earn Up to 80% Course Fee Discount
+        </h5>
+        <p class="text-sm md:text-base mx-auto max-w-2xl text-center mt-6 max-md:px-2">
+            – Take the <span class="font-semibold text-green-700">FREE Aptitude Test</span> Now!
+        </p>
+        <div class="mt-12 max-w-2xl mx-auto px-4 text-center">
+            <h3 class="text-lg font-semibold mb-4">Suitable for:</h3>
+            <ul class="space-y-3 text-base">
+                <li class="flex items-center justify-center gap-2">
+                    <i class="fas fa-check text-green-600"></i>
+                    <span>School Students (10th, 11th, 12th)</span>
+                </li>
+                <li class="flex items-center justify-center gap-2">
+                    <i class="fas fa-check text-green-600"></i>
+                    <span>College Students & Fresh Graduates</span>
+                </li>
+                <li class="flex items-center justify-center gap-2">
+                    <i class="fas fa-check text-green-600"></i>
+                    <span>Working Professionals & Career Switchers</span>
+                </li>
+            </ul>
+        </div>
+        <div class="mx-auto w-full flex items-center justify-center gap-3 mt-6">
+            <button onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })"
+                class="bg-slate-800 hover:bg-black text-white px-6 py-3 rounded-full font-medium transition">
+                Get Started
+            </button>
+            <button
+                onclick="window.open('https://wa.me/919944288271?text=Hi%20BM%20Academy%2C%20I%20am%20interested%20in%20taking%20the%20SAT%20test.', '_blank')"
+                class="flex items-center gap-2 border border-slate-300 hover:bg-slate-200/30 rounded-full px-6 py-3">
+                <span>Learn More</span>
+                <svg width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.25.5 4.75 4l-3.5 3.5" stroke="#050040" stroke-opacity=".4" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- Section 2 (Unchanged) -->
+    <section id="about" class="bg-white py-20">
+        <div
+            class="mx-auto px-6 md:px-16 lg:px-24 xl:px-32 flex flex-col-reverse md:flex-row items-center md:justify-between gap-12 pb-16 min-h-[600px]">
+            <div class="w-full md:w-1/2 max-md:mb-8 text-left" data-aos="fade-right" data-aos-delay="100">
+                <p class="flex items-center gap-1 text-gray-500 text-xs mb-2" data-aos="fade-up" data-aos-delay="150">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M3 0a1 1 0 0 1 1 1v1h1a1 1 0 0 1 0 2H4v1a1 1 0 0 1-2 0V4H1a1 1 0 0 1 0-2h1V1a1 1 0 0 1 1-1m0 10a1 1 0 0 1 1 1v1h1a1 1 0 0 1 0 2H4v1a1 1 0 1 1-2 0v-1H1a1 1 0 0 1 0-2h1v-1a1 1 0 0 1 1-1m7-10a1 1 0 0 1 .967.744L12.146 5.2 15.5 7.134a1 1 0 0 1 0 1.732l-3.354 1.935-1.18 4.455a1 1 0 0 1-1.933 0L7.854 10.8 4.5 8.866a1 1 0 0 1 0-1.732l3.354-1.935L9.034.744A1 1 0 0 1 10 0"
+                            fill="#6B7280" />
+                    </svg>
+                    About Us
+                </p>
+                <h1 class="font-extrabold text-4xl md:text-6xl text-gray-900 mb-4 leading-tight" data-aos="fade-up"
+                    data-aos-delay="200">
+                    What is the SAT by
+                    <br />
+                    <span
+                        class="inline-block bg-[#f3eaca] text-black font-extrabold px-3 -mb-1 border-b-2 border-indigo-700">
+                        BM Academy?
+                    </span>
+                </h1>
+                <p class="text-gray-600 text-sm mb-6" data-aos="fade-up" data-aos-delay="250">
+                    The Scholarship Assessment Test (SAT) is a FREE 25–30 minute aptitude test<br />
+                    designed to help you win big savings on your course fees based on your logical<br /> and reasoning
+                    skills.
+                </p>
+                <ul class="text-gray-600 text-sm space-y-2 mb-6" data-aos="fade-up" data-aos-delay="300">
+                    <li class="flex items-center justify-start gap-2">
+                        <i class="fas fa-check text-green-600"></i>
+                        <span>Results in 48 hrs via Email & WhatsApp</span>
+                    </li>
+                    <li class="flex items-center justify-start gap-2">
+                        <i class="fas fa-check text-green-600"></i>
+                        <span>Scholarships worth up to ₹15,000</span>
+                    </li>
+                </ul>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4" data-aos="fade-up" data-aos-delay="350">
+                    Mode:</h2>
+                <div class="flex flex-wrap gap-3 mb-3" data-aos="fade-up" data-aos-delay="400">
+                    <span
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-indigo-100 text-indigo-800 text-sm font-medium rounded-full shadow-sm">
+                        <i class="fas fa-school"></i>
+                        <span>School Students</span>
+                        <span class="hidden sm:inline text-xs text-gray-500">(10th–12th)</span>
+                    </span>
+                    <span
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-yellow-100 text-yellow-800 text-sm font-medium rounded-full shadow-sm">
+                        <i class="fas fa-user-graduate"></i>
+                        <span>College Students</span>
+                    </span>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 flex justify-center" data-aos="zoom-in" data-aos-delay="500">
+                <img class="w-full rounded-xl shadow-md" src="../image/test.jpg" alt="rightSideImage" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Why Take the BM Academy SAT? -->
+    <section class="bg-gradient-to-br from-white via-blue-50 to-gray-100 py-20" id="services">
+        <div class="max-w-6xl mx-auto px-6 text-center" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-16">
+                Why Take the <span class="text-green-600">BM Academy SAT?</span>
+            </h2>
+            <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3 justify-center">
+                <div class="relative group overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-shadow rounded-2xl p-8 mx-auto w-full max-w-sm"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="absolute inset-0 bg-blue-100 scale-0 group-hover:scale-100 transition-transform duration-500 origin-top-left z-0 rounded-2xl">
+                    </div>
+                    <div class="relative z-10 flex items-center justify-center mb-4">
+                        <div
+                            class="w-14 h-14 flex items-center justify-center rounded-full bg-blue-50 text-green-600 text-2xl transition-colors duration-300 group-hover:bg-green-600 group-hover:text-white">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                    </div>
+                    <div class="relative z-10">
+                        <h4
+                            class="text-lg font-semibold mb-2 text-gray-800 group-hover:text-black transition-colors duration-300">
+                            FREE Test – Online or Offline
+                        </h4>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-shadow rounded-2xl p-8 mx-auto w-full max-w-sm"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="absolute inset-0 bg-blue-100 scale-0 group-hover:scale-100 transition-transform duration-500 origin-top-left z-0 rounded-2xl">
+                    </div>
+                    <div class="relative z-10 flex items-center justify-center mb-4">
+                        <div
+                            class="w-14 h-14 flex items-center justify-center rounded-full bg-blue-50 text-green-600 text-2xl transition-colors duration-300 group-hover:bg-green-600 group-hover:text-white">
+                            <i class="fas fa-user-cog"></i>
+                        </div>
+                    </div>
+                    <div class="relative z-10">
+                        <h4
+                            class="text-lg font-semibold mb-2 text-gray-800 group-hover:text-black transition-colors duration-300">
+                            Personalized Course Suggestions
+                        </h4>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-shadow rounded-2xl p-8 mx-auto w-full max-w-sm"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="absolute inset-0 bg-blue-100 scale-0 group-hover:scale-100 transition-transform duration-500 origin-top-left z-0 rounded-2xl">
+                    </div>
+                    <div class="relative z-10 flex items-center justify-center mb-4">
+                        <div
+                            class="w-14 h-14 flex items-center justify-center rounded-full bg-blue-50 text-green-600 text-2xl transition-colors duration-300 group-hover:bg-green-600 group-hover:text-white">
+                            <i class="fas fa-tags"></i>
+                        </div>
+                    </div>
+                    <div class="relative z-10">
+                        <h4
+                            class="text-lg font-semibold mb-2 text-gray-800 group-hover:text-black transition-colors duration-300">
+                            Save on Course Fees
+                        </h4>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-shadow rounded-2xl p-8 mx-auto w-full max-w-sm"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <div
+                        class="absolute inset-0 bg-blue-100 scale-0 group-hover:scale-100 transition-transform duration-500 origin-top-left z-0 rounded-2xl">
+                    </div>
+                    <div class="relative z-10 flex items-center justify-center mb-4">
+                        <div
+                            class="w-14 h-14 flex items-center justify-center rounded-full bg-blue-50 text-green-600 text-2xl transition-colors duration-300 group-hover:bg-green-600 group-hover:text-white">
+                            <i class="fas fa-stopwatch"></i>
+                        </div>
+                    </div>
+                    <div class="relative z-10">
+                        <h4
+                            class="text-lg font-semibold mb-2 text-gray-800 group-hover:text-black transition-colors duration-300">
+                            Fast & Convenient
+                        </h4>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-shadow rounded-2xl p-8 mx-auto w-full max-w-sm"
+                    data-aos="fade-up" data-aos-delay="500">
+                    <div
+                        class="absolute inset-0 bg-blue-100 scale-0 group-hover:scale-100 transition-transform duration-500 origin-top-left z-0 rounded-2xl">
+                    </div>
+                    <div class="relative z-10 flex items-center justify-center mb-4">
+                        <div
+                            class="w-14 h-14 flex items-center justify-center rounded-full bg-blue-50 text-green-600 text-2xl transition-colors duration-300 group-hover:bg-green-600 group-hover:text-white">
+                            <i class="fas fa-users"></i>
+                        </div>
+                    </div>
+                    <div class="relative z-10">
+                        <h4
+                            class="text-lg font-semibold mb-2 text-gray-800 group-hover:text-black transition-colors duration-300">
+                            Inclusive for All
+                        </h4>
+                    </div>
+                </div>
+                <div class="hidden lg:block"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: SAT Test Details -->
+    <section class="relative w-full py-20 flex items-center justify-center overflow-hidden px-4 bg-gray-50">
+        <div
+            class="absolute -top-10 -left-10 w-40 h-40 bg-blue-100 rounded-full opacity-50 blur-2xl animate-pulse-slow">
+        </div>
+        <div
+            class="absolute -bottom-20 right-0 w-52 h-52 bg-green-100 rounded-full opacity-40 blur-2xl animate-bounce-slow">
+        </div>
+        <div class="absolute top-10 left-20 text-blue-600/40 text-4xl animate-float-1">
+            <i class="fas fa-book"></i>
+        </div>
+        <div class="absolute bottom-20 right-20 text-blue-600/40 text-4xl animate-float-2">
+            <i class="fas fa-graduation-cap"></i>
+        </div>
+        <div class="absolute top-1/3 left-1/4 text-blue-600/40 text-4xl animate-float-3">
+            <i class="fas fa-certificate"></i>
+        </div>
+        <div class="relative max-w-md w-full" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="absolute inset-x-0 top-1 flex justify-center z-10">
+                <span
+                    class="rounded-full bg-gradient-to-r from-blue-600 to-green-600 px-3 py-1 text-xs font-semibold text-white shadow">
+                    SAT Test Details
+                </span>
+            </div>
+            <div class="mt-5 rounded-xl border-2 border-blue-800 bg-white shadow-2xl overflow-hidden">
+                <div class="border-b border-gray-200 p-8 bg-blue-50">
+                    <h3 class="text-3xl font-extrabold text-gray-900">BM Academy SAT</h3>
+                    <p class="text-base text-gray-600 mt-2">Your gateway to scholarship opportunities</p>
+                </div>
+                <div class="p-8 space-y-5 text-base text-gray-700">
+                    <div class="flex items-start gap-2">
+                        <span class="font-semibold w-28">Test Date:</span>
+                        <span class="flex-1">Open Everyday (Online or Visit Academy)</span>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="font-semibold w-28">Duration:</span>
+                        <span class="flex-1">25–30 Minutes</span>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="font-semibold w-28">Mode:</span>
+                        <span class="flex-1">Online (Google Form) or Offline at BM Academy</span>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="font-semibold w-28">Result:</span>
+                        <span class="flex-1">Within 48 hrs (Email & WhatsApp PDF)</span>
+                    </div>
+                </div>
+                <div class="border-t border-gray-200 p-6">
+                    <button
+                        onclick="window.open('https://wa.me/919944288271?text=Hi%20BM%20Academy%2C%20I%20am%20interested%20in%20taking%20the%20SAT%20test.', '_blank')"
+                        class="w-full rounded-lg bg-blue-600 text-white font-medium text-base px-6 py-3 hover:bg-blue-800 transition">
+                        Register for SAT
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Scholarship Slabs -->
+    <section id="scholarship" class="bg-white py-20">
+        <div class="max-w-6xl mx-auto px-6 md:px-12 lg:px-20">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-4xl font-extrabold text-gray-900 mb-2">
+                    🎓 Scholarship Slabs at BM Academy
+                </h2>
+                <p class="text-gray-600 text-lg">
+                    Unlock your scholarship based on your SAT performance.
+                </p>
+            </div>
+            <div class="w-full max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                <table class="w-full text-left text-sm border-collapse rounded-xl overflow-hidden shadow-md">
+                    <thead>
+                        <tr class="bg-blue-600 text-white">
+                            <th class="py-3 px-4 font-semibold">Your SAT Score</th>
+                            <th class="py-3 px-4 font-semibold">Scholarship Discount</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white">
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="py-3 px-4">
+                                <i class="fas fa-star text-yellow-500 mr-2"></i>85% and above
+                            </td>
+                            <td class="py-3 px-4 font-semibold text-green-600">80% OFF</td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="py-3 px-4">
+                                <i class="fas fa-star-half-alt text-yellow-400 mr-2"></i>70% – 84%
+                            </td>
+                            <td class="py-3 px-4 font-semibold text-green-600">50% OFF</td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="py-3 px-4">
+                                <i class="fas fa-circle-notch text-yellow-300 mr-2"></i>50% – 69%
+                            </td>
+                            <td class="py-3 px-4 font-semibold text-yellow-600">25% OFF</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-3 px-4">
+                                <i class="fas fa-info-circle text-gray-400 mr-2"></i>Below 50%
+                            </td>
+                            <td class="py-3 px-4 font-semibold text-gray-600">Guaranteed Base Discount</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="mt-12 text-center" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">
+                    Apply your <span class="text-green-600">scholarship </span><br />to
+                    top-rated programs:
+                </h3>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium shadow-sm">
+                        <i class="fas fa-bullhorn"></i> Digital Marketing
+                    </span>
+                    <span
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium shadow-sm">
+                        <i class="fas fa-brain"></i> Python & Data Science
+                    </span>
+                    <span
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium shadow-sm">
+                        <i class="fas fa-code"></i> Web & Full Stack Dev
+                    </span>
+                    <span
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium shadow-sm">
+                        <i class="fas fa-university"></i> Bank Exam Coaching
+                    </span>
+                    <span
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium shadow-sm">
+                        <i class="fas fa-comments"></i> Communication & Soft Skills
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Testimonials -->
+    <section id="testimonials" class="bg-gray-50 py-20">
+        <div class="text-center mb-10">
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-2">
+                <i class="fas fa-comment-dots text-blue-600 mr-2"></i> Student Testimonials & Results
+            </h2>
+            <p class="text-gray-600 text-lg">Hear from our successful SAT participants</p>
+        </div>
+        <style>
+            @keyframes marqueeScroll {
+                0% {
+                    transform: translateX(0%);
+                }
+
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
+
+            .marquee-inner {
+                animation: marqueeScroll 28s linear infinite;
+            }
+
+            .marquee-reverse {
+                animation-direction: reverse;
+            }
+        </style>
+        <div class="marquee-row w-full mx-auto max-w-6xl overflow-hidden relative">
+            <div
+                class="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-gray-50 to-transparent">
+            </div>
+            <div class="marquee-inner flex min-w-[200%] gap-6 pb-6 pt-10" id="row1"></div>
+            <div
+                class="absolute right-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-l from-gray-50 to-transparent">
+            </div>
+        </div>
+        <div class="marquee-row w-full mx-auto max-w-6xl overflow-hidden relative">
+            <div
+                class="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-gray-50 to-transparent">
+            </div>
+            <div class="marquee-inner marquee-reverse flex min-w-[200%] gap-6 pt-6 pb-10" id="row2"></div>
+            <div
+                class="absolute right-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-l from-gray-50 to-transparent">
+            </div>
+        </div>
+        <script>
+            const cardsData = [
+                {
+                    name: "Priya",
+                    handle: "College Student",
+                    text: "I scored 78% on the SAT and received 50% off my Digital Marketing course at BM Academy. It was so easy!",
+                },
+                {
+                    name: "Sundar",
+                    handle: "MBA Graduate",
+                    text: "As a working professional, I loved how simple and quick the SAT was. I got 25% off the Power BI course!",
+                },
+                {
+                    name: "Aarav",
+                    handle: "12th Std Student",
+                    text: "The SAT was stress-free and fun. I got a 40% scholarship for the Web Development program. Thank you BM Academy!",
+                },
+                {
+                    name: "Meera",
+                    handle: "Job Seeker",
+                    text: "After scoring 85% in the SAT, I joined the UI/UX Design course with a 60% scholarship. It really helped me switch careers.",
+                },
+                {
+                    name: "Rahul",
+                    handle: "B.Com Graduate",
+                    text: "BM Academy’s SAT test was a great opportunity. I earned 30% off on my Data Analytics course — highly recommend it!",
+                },
+            ];
+
+            const row1 = document.getElementById("row1");
+            const row2 = document.getElementById("row2");
+            const createCard = (card) => `
+                <div class="bg-white p-4 rounded-xl w-72 shadow hover:shadow-lg transition duration-300 shrink-0">
+                    <div class="flex gap-3 items-center mb-3">
+                        <div>
+                            <h4 class="font-semibold text-gray-800"> ${card.name}</h4>
+                            <p class="text-xs text-gray-500">${card.handle}</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-4"><i class="fas fa-quote-left text-blue-400 mr-1"></i>${card.text}</p>
+                </div>
+            `;
+            const renderCards = (target) => {
+                const doubled = [...cardsData, ...cardsData];
+                doubled.forEach((card) => target.insertAdjacentHTML("beforeend", createCard(card)));
+            };
+            renderCards(row1);
+            renderCards(row2);
+        </script>
+    </section>
+
+    <!-- Footer -->
+    <footer class="px-6 md:px-16 lg:px-24 xl:px-32 bg-blue-50" id="contact">
+        <div
+            class="flex flex-col md:flex-row items-start justify-between gap-10 py-10 border-b border-gray-500/30 text-gray-500">
+            <div class="flex-1 min-w-[250px]">
+                <a class="site_link" href="#">
+                    <img src="../image/bm.png" alt="Collab - Online Learning Platform"
+                        style="height: 55px; width: auto;">
+                </a>
+                <p class="max-w-sm mt-6">
+                    BM Academy offers hands-on training in courses like Digital Marketing, Web Development, and Cloud
+                    Computing, designed to equip students with essential skills for today's industries. With expert
+                    guidance and career support, we help you unlock your potential and achieve professional growth.
+                </p>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between w-full md:w-[65%] gap-10">
+                <div class="flex-1 min-w-[150px]">
+                    <h3 class="font-semibold text-base text-gray-900 mb-3 md:mb-5">Quick Links</h3>
+                    <ul class="text-sm space-y-1">
+                        <li><a href="#home" class="hover:underline transition">Home</a></li>
+                        <li><a href="#Services" class="hover:underline transition">Services</a></li>
+                        <li><a href="#scholarship" class="hover:underline transition">Scholarship</a></li>
+                        <li><a href="#testimonials" class="hover:underline transition">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div class="flex-1 min-w-[150px]">
+                    <h3 class="font-semibold text-base text-gray-900 mb-3 md:mb-5">Follow Us</h3>
+                    <ul class="flex gap-4 text-lg text-gray-700">
+                        <li><a href="https://www.instagram.com/bmacademypondy/" target="_blank"
+                                class="hover:text-blue-600 transition"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://x.com/BMACADEMYPONDY" target="_blank"
+                                class="hover:text-blue-600 transition"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/people/BM-Academy/61566753898165/" target="_blank"
+                                class="hover:text-blue-600 transition"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="https://www.youtube.com/@bmacademypondy" target="_blank"
+                                class="hover:text-blue-600 transition"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="flex-1 min-w-[250px]">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9605.494660602379!2d79.83609451294072!3d11.961680735595172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a53636a1752dc05%3A0xaa5795ccc1815bf7!2sBM%20Academy%20-%20Digital%20Marketing%2C%20Full%20Stack%20Development%2C%20IT%20%26%20Skill%20Training%20Institute!5e1!3m2!1sen!2sin!4v1749880774336!5m2!1sen!2sin"
+                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <p class="py-4 text-center text-sm md:text-base text-gray-500/80">
+            © <span id="year"></span> <a href="https://thebmacademy.com/" target="_blank"
+                class="hover:underline text-blue-600">BM Academy</a>. All Rights Reserved.
+        </p>
+    </footer>
+
+    <section>
+        <!-- Floating SAT Button -->
+        <button
+            onclick="window.open('https://wa.me/919944288271?text=Hi%20BM%20Academy%2C%20I%20am%20interested%20in%20taking%20the%20SAT%20test.', '_blank')"
+            class="fixed bottom-6 right-6 z-50 bg-[#cb2800] hover:bg-[#a32000] text-white px-5 py-3 rounded-full shadow-lg flex items-center gap-2 text-sm md:text-base font-semibold transition">
+            <i class="fas fa-bullseye text-white text-base"></i>
+            Take SAT
+        </button>
+    </section>
+
+    <!-- promotion -->
+    <section>
+        
+<!-- Promo Modal Wrapper -->
+<div id="promo-modal" class="fixed inset-0 z-50 bg-black/50 flex items-center justify-center hidden">
+  <div class="md:grid md:grid-cols-2 max-w-4xl bg-white mx-4 md:mx-auto rounded-xl overflow-hidden relative min-h-[400px]">
+    
+    <!-- Image Section -->
+    <img src="../image/banner.jpg"
+         alt="promotional"
+         class="hidden md:block w-full h-full object-cover">
+
+    <!-- Content Section -->
+    <div class="relative flex items-center justify-center h-full bg-white">
+      
+      <!-- Close Button -->
+      <button onclick="closePromoModal()"
+              class="absolute top-6 right-6 bg-gray-200 rounded-full p-2.5"
+              aria-label="Close">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <path d="M13 2 2 13M2 2l11 11"
+                stroke="#1E3A8A"
+                stroke-opacity=".7"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+      </button>
+
+      <!-- Text Content -->
+      <div class="max-md:py-20 px-6 md:px-10 text-center">
+        <h1 class="text-3xl font-bold leading-snug">
+          <span class="text-green-600">Earn Up to 80% Course Fee Discount</span><br>
+          – Take the FREE Aptitude Test Now!
+        </h1>
+        <button onclick="window.open('https://wa.me/919944288271?text=Hi%20BM%20Academy%2C%20I%20am%20interested%20in%20taking%20the%20SAT%20test.', '_blank')"
+                class="rounded-lg bg-blue-600 text-sm px-14 py-3 mt-6 text-white hover:bg-blue-800 transition">
+          Take the Test
+        </button>
+        <button onclick="closePromoModal()" class="px-8 py-3 mt-4 text-sm text-gray-800">
+          No thanks, I’m not interested.
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </section>
+
+    <!-- Script Links -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
