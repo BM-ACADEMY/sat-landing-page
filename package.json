@@ -1,0 +1,27 @@
+{
+  "name": "sat-landing-page",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000s\u0000a\u0000t\u0000-\u0000l\u0000a\u0000n\u0000d\u0000i\u0000n\u0000g\u0000-\u0000p\u0000a\u0000g\u0000e\u0000\r\u0000 \u0000",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BM-ACADEMY/sat-landing-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/BM-ACADEMY/sat-landing-page/issues"
+  },
+  "homepage": "https://github.com/BM-ACADEMY/sat-landing-page#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.4"
+  }
+}

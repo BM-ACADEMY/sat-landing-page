@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Online Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e3f2fd, #fff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .test-wrapper {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    form#student-info {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    input[type="email"],
+    input[type="tel"] {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    .question-box {
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 8px;
+      background-color: #fafafa;
+    }
+
+    .question-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 15px;
+      color: #333;
+    }
+
+    #submit-btn {
+      background-color: #007BFF;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.3s;
+    }
+
+    #submit-btn:disabled {
+      background-color: #aaa;
+      cursor: not-allowed;
+    }
+
+    #submit-btn:hover:not(:disabled) {
+      background-color: #0056b3;
+    }
+
+    .result-box {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #e6f7ff;
+      border: 1px solid #b3e0ff;
+      border-radius: 8px;
+    }
+
+    .result-box h3 {
+      color: #2b6cb0;
+    }
+
+    .result-box ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    @media screen and (max-width: 640px) {
+      .test-wrapper {
+        padding: 20px;
+      }
+
+      input[type="email"],
+      input[type="tel"] {
+        font-size: 14px;
+      }
+
+      #submit-btn {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="test-wrapper">
+    <h2>Student Test</h2>
+
+    <form id="student-info">
+      <input type="email" id="email" placeholder="Enter your Email" required />
+      <input type="tel" id="phone" placeholder="Enter your Phone Number" required />
+    </form>
+
+    <div id="quiz-container"></div>
+
+    <button id="submit-btn">Submit Test</button>
+
+    <div class="result-box" id="result" style="display: none;"></div>
+  </div>
+
+  <script>
+    const quizContainer = document.getElementById('quiz-container');
+    const resultBox = document.getElementById('result');
+    const submitBtn = document.getElementById('submit-btn');
+
+    let questions = [];
+
+    async function loadQuestions() {
+      try {
+        const res = await fetch('http://localhost:5000/questions');
+        questions = await res.json();
+
+        questions.forEach((q) => {
+          const div = document.createElement('div');
+          div.className = 'question-box';
+          div.innerHTML = `
+            <div class="question-title">${q.question}</div>
+            ${q.options.map((opt) => `
+              <label>
+                <input type="radio" name="${q._id}" value="${opt}" />
+                ${opt}
+              </label>
+            `).join('')}
+          `;
+          quizContainer.appendChild(div);
+        });
+      } catch (err) {
+        alert("Failed to load questions. Please check your backend.");
+      }
+    }
+
+    loadQuestions();
+
+    submitBtn.addEventListener('click', async () => {
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+
+      if (!email || !phone) {
+        alert("Please enter Email and Phone Number.");
+        return;
+      }
+
+      const answers = {};
+      let score = 0;
+
+      questions.forEach((q) => {
+        const selected = document.querySelector(`input[name="${q._id}"]:checked`);
+        if (selected) {
+          const userAnswer = selected.value.trim().toLowerCase();
+          const correctAnswer = q.correctAnswer?.trim().toLowerCase();
+          answers[q._id] = selected.value;
+
+          if (userAnswer === correctAnswer) {
+            score++;
+          }
+        } else {
+          answers[q._id] = "";
+        }
+      });
+
+      try {
+        const res = await fetch('http://localhost:5000/submit-test', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, phone, answers, score })
+        });
+
+        const data = await res.json();
+
+        if (!res.ok) {
+          alert(data.error || "Submission failed.");
+          return;
+        }
+
+        resultBox.style.display = 'block';
+        resultBox.innerHTML = `
+          <h3>Your Score: ${data.score} (${data.percentage}%)</h3>
+          <h4>Course Offers:</h4>
+          <ul>
+            ${data.courses.map(c => `
+              <li>
+                ${c.course}: 
+                Original Fee $${c.originalFee.toFixed(2)} → 
+                Discounted Fee $${c.discountedFee.toFixed(2)} 
+                (${c.discount} off)
+              </li>
+            `).join('')}
+          </ul>
+        `;
+
+        localStorage.setItem('testSubmitted', 'true');
+        submitBtn.disabled = true;
+        submitBtn.innerText = "Test Already Submitted";
+
+      } catch (err) {
+        alert("Submission failed. Please check your backend.");
+      }
+    });
+  </script>
+</body>
+</html>
